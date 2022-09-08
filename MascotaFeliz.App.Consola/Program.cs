@@ -49,10 +49,14 @@ namespace MascotaFeliz.App.Consola
 
         private static void AddMascota()
         {
-            Nombre = "Hugo",
-            Color = "Rojo",
-            Especie = "Canino",
-            Raza = "Lobo"
+            var mascota = new Mascota
+            {
+                Nombre = "Hugo",
+                Color = "Rojo",
+                Especie = "Canino",
+                Raza = "Lobo"
+            };
+            _repoMascota.AddMascota(mascota);
         }
         
     }
