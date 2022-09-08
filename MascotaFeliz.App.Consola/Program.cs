@@ -15,6 +15,7 @@ namespace MascotaFeliz.App.Consola
             Console.WriteLine("Hello World!");
             //AddDueno();
             //AddVeterinario();
+            //AddMascota();
         }
         
         private static void AddDueno()
