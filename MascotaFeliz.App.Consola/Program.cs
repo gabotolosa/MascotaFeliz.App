@@ -16,6 +16,7 @@ namespace MascotaFeliz.App.Consola
             //AddDueno();
             //AddVeterinario();
             //AddMascota();
+            DeleteDueno();
         }
         
         private static void AddDueno()
@@ -23,15 +24,19 @@ namespace MascotaFeliz.App.Consola
             var dueno = new Dueno
             {
                 //Cedula = "1212",
-                Nombres = "Juan",
-                Apellidos = "Sin Miedo",
-                Direccion = "Bajo un puente",
-                Telefono = "1234567891",
-                Correo = "juansinmiedo@gmail.com"
+                Nombres = "Pepito",
+                Apellidos = "Perez",
+                Direccion = "alli en la esquina",
+                Telefono = "7654321",
+                Correo = "pepito123@gmail.com"
             };
             _repoDueno.AddDueno(dueno);
         }
         
+        private static void DeleteDueno()
+        {
+            _repoDueno.DeleteDueno(3);
+        }
         
         private static void AddVeterinario()
         {

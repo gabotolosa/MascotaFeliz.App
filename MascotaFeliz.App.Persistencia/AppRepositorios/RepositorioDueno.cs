@@ -40,7 +40,7 @@ namespace MascotaFeliz.App.Persistencia
             _appContext.SaveChanges();
         }
 
-    public IEnumerable<Dueno> GetAllDuenos()
+        public IEnumerable<Dueno> GetAllDuenos()
         {
             return GetAllDuenos_();
         }

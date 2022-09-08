@@ -22,6 +22,15 @@ namespace MascotaFeliz.App.Persistencia
             return veterinarioAdicionado.Entity;
         }
 
+        public void DeleteVeterinario(int iDVeterinario)
+        {
+            var veterinarioEncontrado = _appContext.Veterinarios.FirstOrDefault(d=>d.Id==iDVeterinario);
+            if (veterinarioEncontrado==null)
+                return;
+            _appContext.Veterinarios.Remove(veterinarioEncontrado);
+            _appContext.SaveChanges();
+        }
+
 
     }
 }
