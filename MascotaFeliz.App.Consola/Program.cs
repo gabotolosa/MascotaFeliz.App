@@ -16,10 +16,11 @@ namespace MascotaFeliz.App.Consola
             //AddDueno();
             //AddVeterinario();
             //AddMascota();
-            DeleteDueno();
+            //DeleteDueno();
+            ActualizarDueno(4);
         }
         
-        private static void AddDueno()
+        private static void AddDueno()//agregar dueño
         {
             var dueno = new Dueno
             {
@@ -33,12 +34,12 @@ namespace MascotaFeliz.App.Consola
             _repoDueno.AddDueno(dueno);
         }
         
-        private static void DeleteDueno()
+        private static void DeleteDueno()//borra dueño con el id
         {
             _repoDueno.DeleteDueno(3);
         }
         
-        private static void AddVeterinario()
+        private static void AddVeterinario()//agrega veterinario
         {
             var veterinario = new Veterinario
             {
@@ -52,17 +53,30 @@ namespace MascotaFeliz.App.Consola
             _repoVeterinario.AddVeterinario(veterinario);
         }
 
-        private static void AddMascota()
+        private static void AddMascota()//agrega mascota
         {
             var mascota = new Mascota
             {
-                Nombre = "Hugo",
-                Color = "Rojo",
-                Especie = "Canino",
-                Raza = "Lobo"
+                Nombre = "Mono",
+                Color = "Amarillo",
+                Especie = "Felino",
+                Raza = "Angora"
             };
             _repoMascota.AddMascota(mascota);
         }
         
+        private static void ActualizarDueno(int idDueno)
+        {
+            var dueno =new Dueno
+            {
+                Id = idDueno,
+                Nombres="pepe",
+                Apellidos="Perez",
+                Direccion="Azul Azul",
+                Telefono="111222333",
+                Correo="pepeper@gmail.com"
+            };
+            _repoDueno.UpdateDueno(dueno);
+        }
     }
 }
