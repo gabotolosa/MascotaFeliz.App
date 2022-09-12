@@ -17,7 +17,7 @@ namespace MascotaFeliz.App.Consola
             //AddVeterinario();
             //AddMascota();
             //DeleteDueno();
-            ActualizarDueno(4);
+            //ActualizarDueno(4);
         }
         
         private static void AddDueno()//agregar dueño

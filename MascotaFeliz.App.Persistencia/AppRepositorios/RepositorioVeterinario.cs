@@ -31,6 +31,20 @@ namespace MascotaFeliz.App.Persistencia
             _appContext.SaveChanges();
         }
 
+        public Veterinario UpdateVeterinario(Veterinario veterinario)
+        {
+            var veterinarioEncontrado = _appContext.Veterinarios.FirstOrDefault( d => d.Id == veterinario.Id);
+            if(veterinarioEncontrado != null)
+            {
+                veterinarioEncontrado.Nombres=veterinario.Nombres;
+                veterinarioEncontrado.Apellidos=veterinario.Apellidos;
+                veterinarioEncontrado.Direccion=veterinario.Direccion;
+                veterinarioEncontrado.Telefono=veterinario.Telefono;
+                veterinarioEncontrado.TarjetaProfesional=veterinario.TarjetaProfesional;
 
+                _appContext.SaveChanges();
+            }
+            return veterinarioEncontrado;
+        }
     }
 }

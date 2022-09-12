@@ -8,5 +8,7 @@ namespace MascotaFeliz.App.Persistencia
     public interface IRepositorioMascota
     {
         Mascota AddMascota(Mascota mascota);
+        void DeleteMascota(int idMascota);
+        Mascota UpdateMascota(Mascota mascota);
     }
 }
