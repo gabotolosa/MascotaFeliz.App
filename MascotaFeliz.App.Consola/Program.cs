@@ -17,7 +17,7 @@ namespace MascotaFeliz.App.Consola
             //AddVeterinario();
             //AddMascota();
             //DeleteDueno();
-            //ActualizarDueno(4);
+            ActualizarDueno(4);
         }
         
         private static void AddDueno()//agregar dueño
@@ -44,11 +44,11 @@ namespace MascotaFeliz.App.Consola
             var veterinario = new Veterinario
             {
                 //Cedula = "1212",
-                Nombres = "Miguel",
-                Apellidos = "Mata Lozano",
-                Direccion = "River Country",
-                Telefono = "30001112233",
-                TarjetaProfesional = "f1234567"
+                Nombres = "Angela",
+                Apellidos = "Becerra",
+                Direccion = "Andino",
+                Telefono = "77712233",
+                TarjetaProfesional = "f998877"
             };
             _repoVeterinario.AddVeterinario(veterinario);
         }
@@ -71,12 +71,23 @@ namespace MascotaFeliz.App.Consola
             {
                 Id = idDueno,
                 Nombres="pepe",
-                Apellidos="Perez",
-                Direccion="Azul Azul",
-                Telefono="111222333",
+                Apellidos="veloz",
+                Direccion="alli no mas",
+                Telefono="10000011",
                 Correo="pepeper@gmail.com"
             };
             _repoDueno.UpdateDueno(dueno);
         }
+
+        /*
+        private static void AddHistoria()
+        {
+            var historia = new Historia
+            {
+                FechaInicial = new DateTime(2020, 01, 01)
+
+            };
+            _repoHistoria.AddHistoria(historia);
+        }*/
     }
 }
