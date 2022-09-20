@@ -46,5 +46,21 @@ namespace MascotaFeliz.App.Persistencia
             }
             return veterinarioEncontrado;
         }
+
+        public IEnumerable<Veterinario> GetAllVeterinarios()
+        {
+            return GetAllVeterinarios_();
+        }
+
+        public IEnumerable<Veterinario> GetAllVeterinarios_()
+        {
+            return _appContext.Veterinarios;
+        }
+
+        public Veterinario GetVeterinario(int iDVeterinario)
+        {
+            return _appContext.Veterinarios.FirstOrDefault(d => d.Id == iDVeterinario);
+        }
+
     }
 }

@@ -17,7 +17,7 @@ namespace MascotaFeliz.App.Consola
             //AddVeterinario();
             //AddMascota();
             //DeleteDueno();
-            ActualizarDueno(4);
+            //ActualizarDueno(4);
         }
         
         private static void AddDueno()//agregar dueño
@@ -79,7 +79,11 @@ namespace MascotaFeliz.App.Consola
             _repoDueno.UpdateDueno(dueno);
         }
 
-        /*
+        
+    }
+}
+
+/*
         private static void AddHistoria()
         {
             var historia = new Historia
@@ -89,5 +93,3 @@ namespace MascotaFeliz.App.Consola
             };
             _repoHistoria.AddHistoria(historia);
         }*/
-    }
-}
