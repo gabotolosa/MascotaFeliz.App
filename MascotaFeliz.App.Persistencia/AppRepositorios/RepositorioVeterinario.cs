@@ -62,5 +62,19 @@ namespace MascotaFeliz.App.Persistencia
             return _appContext.Veterinarios.FirstOrDefault(d => d.Id == iDVeterinario);
         }
 
+        public IEnumerable<Veterinario> GetVeterinarioPorFiltro(string filtro)
+        {
+            var veterinarios = GetAllVeterinarios();
+            if(veterinarios != null)
+            {
+                if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
+                {
+                    veterinarios = veterinarios.Where(s => s.Nombres.Contains(filtro));     
+                }
+                
+            }
+            return veterinarios;
+        }
+
     }
 }
