@@ -17,22 +17,44 @@ namespace MascotaFeliz.App.Persistencia
         /// Inyeccion de dependencias para indicar el contexto a utilizar
         /// </summary>
         /// <param name="appContext"></param>//
+        
         public RepositorioDueno(AppContext appContext)
         {
             _appContext = appContext;
         }
 
+        public IEnumerable<Dueno> GetAllDuenos(){
+            return GetAllDuenos_();
+        }
 
-        public Dueno AddDueno(Dueno dueno)
-        {
+        public IEnumerable<Dueno> GetAllDuenos_(){
+            return _appContext.Duenos;
+        }
+
+        public Dueno AddDueno(Dueno dueno){
             var duenoAdicionado = _appContext.Duenos.Add(dueno);
             _appContext.SaveChanges();
             return duenoAdicionado.Entity;
 
         }
 
-        public void DeleteDueno(int idDueno)
-        {
+        public Dueno UpdateDueno(Dueno dueno){
+            var duenoEncontrado = _appContext.Duenos.FirstOrDefault(d => d.Id == dueno.Id);
+            if (duenoEncontrado != null)
+            {
+                duenoEncontrado.Nombres = dueno.Nombres;
+                duenoEncontrado.Apellidos = dueno.Apellidos;
+                duenoEncontrado.Direccion = dueno.Direccion;
+                duenoEncontrado.Telefono = dueno.Telefono;
+                duenoEncontrado.Correo = dueno.Correo;
+                
+                _appContext.SaveChanges();
+
+            }
+            return duenoEncontrado;
+        }
+
+        public void DeleteDueno(int idDueno){
             var duenoEncontrado = _appContext.Duenos.FirstOrDefault(d => d.Id == idDueno);
             if (duenoEncontrado == null)
                 return;
@@ -40,10 +62,10 @@ namespace MascotaFeliz.App.Persistencia
             _appContext.SaveChanges();
         }
 
-        public IEnumerable<Dueno> GetAllDuenos()
-        {
-            return GetAllDuenos_();
+        public Dueno GetDueno(int idDueno){
+            return _appContext.Duenos.FirstOrDefault(d => d.Id == idDueno);
         }
+
         public IEnumerable<Dueno> GetDuenosPorFiltro(string filtro)
         {
             var duenos = GetAllDuenos(); // Obtiene todos los saludos
@@ -59,31 +81,6 @@ namespace MascotaFeliz.App.Persistencia
 
         }
 
-        public IEnumerable<Dueno> GetAllDuenos_()
-        {
-            return _appContext.Duenos;
-        }
-
-        public Dueno GetDueno(int idDueno)
-        {
-            return _appContext.Duenos.FirstOrDefault(d => d.Id == idDueno);
-        }
-
-        public Dueno UpdateDueno(Dueno dueno)
-        {
-            var duenoEncontrado = _appContext.Duenos.FirstOrDefault(d => d.Id == dueno.Id);
-            if (duenoEncontrado != null)
-            {
-                duenoEncontrado.Nombres = dueno.Nombres;
-                duenoEncontrado.Apellidos = dueno.Apellidos;
-                duenoEncontrado.Direccion = dueno.Direccion;
-                duenoEncontrado.Telefono = dueno.Telefono;
-                duenoEncontrado.Correo = dueno.Correo;
-                
-                _appContext.SaveChanges();
-
-            }
-            return duenoEncontrado;
-        }
     }
 }
+

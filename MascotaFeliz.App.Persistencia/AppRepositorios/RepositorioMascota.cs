@@ -10,29 +10,25 @@ namespace MascotaFeliz.App.Persistencia
     {
         private readonly AppContext _appContext;
 
-        public RepositorioMascota(AppContext appContext)
-        {
+        public RepositorioMascota(AppContext appContext){
             _appContext = appContext;
         }
 
-        public Mascota AddMascota(Mascota mascota)
-        {
+        public IEnumerable<Mascota> GetAllMascotas(){
+            return GetAllMascotas_();
+        }
+
+        public IEnumerable<Mascota> GetAllMascotas_(){
+            return _appContext.Mascotas;
+        }
+
+        public Mascota AddMascota(Mascota mascota){
             var mascotaAdicionado = _appContext.Mascotas.Add(mascota);
             _appContext.SaveChanges();
             return mascotaAdicionado.Entity;
         }
 
-        public void DeleteMascota(int idMascota)
-        {
-            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(d => d.Id == idMascota);
-            if (mascotaEncontrado == null)
-                return;
-            _appContext.Mascotas.Remove(mascotaEncontrado);
-            _appContext.SaveChanges();
-        }
-
-        public Mascota UpdateMascota(Mascota mascota)
-        {
+        public Mascota UpdateMascota(Mascota mascota){
             var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault( d => d.Id == mascota.Id);
             if(mascotaEncontrado != null)
             {
@@ -45,5 +41,31 @@ namespace MascotaFeliz.App.Persistencia
             }
             return mascotaEncontrado;
         }
+
+        public void DeleteMascota(int idMascota){
+            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(d => d.Id == idMascota);
+            if (mascotaEncontrado == null)
+                return;
+            _appContext.Mascotas.Remove(mascotaEncontrado);
+            _appContext.SaveChanges();
+        }
+
+        public Mascota GetMascota(int idMascota){
+            return _appContext.Mascotas.FirstOrDefault(d => d.Id == idMascota);
+        }
+
+
+        public IEnumerable<Mascota> GetMascotasPorFiltro(string filtro){
+            var mascotas = GetAllMascotas();
+            if(mascotas !=null)
+            {
+                if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
+                {
+                    mascotas = mascotas.Where(s => s.Nombre.Contains(filtro));
+                }
+            }
+            return mascotas;
+        }
+
     }
 }
