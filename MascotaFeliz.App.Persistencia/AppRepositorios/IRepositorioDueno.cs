@@ -16,6 +16,4 @@ namespace MascotaFeliz.App.Persistencia
         IEnumerable<Dueno> GetDuenosPorFiltro(string filtro); //buscar por filtro  
         
     }
-    
-
 }

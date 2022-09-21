@@ -8,7 +8,11 @@ namespace MascotaFeliz.App.Persistencia
 {
     public interface IRepositorioHistoria
     {
-        //Historia AddHistoria(Historia historia);
-
+        //IEnumerable<Historia> GetAllHistorias();//listar todos los dueños
+        //Historia AddHistoria(Historia historia); //agregar historia
+        //Historia UpdateHistoria(Historia historia); //actualizar historia
+        //void DeleteHistoria(int idHistoria);//borrar historia
+        //Historia GetHistoria(int idHistoria); //buscar por id
+        //IEnumerable<Historia> GetHistoriaPorFiltro(string filtro); //buscar por filtro          
     }
 }
