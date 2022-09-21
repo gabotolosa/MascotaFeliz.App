@@ -7,11 +7,11 @@ namespace MascotaFeliz.App.Persistencia
 {
     public interface IRepositorioMascota
     {
-        //IEnumerable<Mascota> GetAllMascotas();//listar todos las mascotas
+        IEnumerable<Mascota> GetAllMascotas();//listar todos las mascotas
         Mascota AddMascota(Mascota mascota);
         Mascota UpdateMascota(Mascota mascota);
         void DeleteMascota(int idMascota);
         Mascota GetMascota(int idMascota);
-        //IEnumerable<Mascota> GetMascotasPorFiltro(string filtro); //buscar por filtro  
+        IEnumerable<Mascota> GetMascotasPorFiltro(string filtro); //buscar por filtro  
     }
 }
