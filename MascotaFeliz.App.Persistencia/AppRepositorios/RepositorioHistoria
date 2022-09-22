@@ -20,7 +20,7 @@ namespace MascotaFeliz.App.Persistencia
         public RepositorioHistoria(AppContext appContext){
             _appContext=appContext;
         }
-
+    
         
     }
 }

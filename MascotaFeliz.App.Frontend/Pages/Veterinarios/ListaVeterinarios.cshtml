@@ -18,16 +18,20 @@
             <td>@veterinario.Apellidos</td>
         
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./DetallesVeterinarios" asp-route-duenoId="@veterinario.Id">
+                <a class="btn btn-primary table-btn" asp-page="./DetallesVeterinarios" asp-route-veterinarioId="@veterinario.Id">
                     Detalle Veterinario
                 </a>
             </td>
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./EditarVeterinarios" asp-route-duenoId="@veterinario.Id">
+                <a class="btn btn-primary table-btn" asp-page="./EditarVeterinarios" asp-route-veterinarioId="@veterinario.Id">
                     Editar Veterinario
                 </a>
             </td>
-
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./BorrarVeterinarios" asp-route-veterinarioId="@veterinario.Id">
+                    Borrar Veterinarios
+                </a>
+            </td>
         </tr>
     }
 </table>
