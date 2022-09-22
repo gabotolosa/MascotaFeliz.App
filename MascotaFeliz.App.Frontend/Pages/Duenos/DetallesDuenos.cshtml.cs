@@ -4,13 +4,31 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MascotaFeliz.App.Dominio;
+using MascotaFeliz.App.Persistencia;
 
 namespace MascotaFeliz.App.Frontend.pages
 {
     public class DetallesDuenosModel : PageModel
     {
-        public void OnGet()
-        {
+        private readonly IRepositorioDueno _repoDueno;
+        [BindProperty] 
+        public Dueno dueno{get;set;}
+
+        public DetallesDuenosModel(){
+            this._repoDueno = new RepositorioDueno(new Persistencia.AppContext());
+        }
+
+        public IActionResult OnGet(int duenoId){
+            dueno = _repoDueno.GetDueno(duenoId);
+            if (dueno == null)
+            {
+                return RedirectToPage("./NotFound.html");
+            }
+            else
+            {
+                return Page();
+            }
         }
     }
 }
