@@ -10,6 +10,8 @@ namespace MascotaFeliz.App.Consola
         private static IRepositorioDueno _repoDueno = new RepositorioDueno(new Persistencia.AppContext());
         private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
         private static IRepositorioMascota _repoMascota = new RepositorioMascota(new Persistencia.AppContext());
+        private static IRepositorioHistoria _repoHistoria =new RepositorioHistoria(new Persistencia.AppContext());
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -18,6 +20,7 @@ namespace MascotaFeliz.App.Consola
             //AddMascota();
             //DeleteDueno();
             //ActualizarDueno(4);
+            //AddHistoria();
         }
         
         private static void AddDueno()//agregar dueño
@@ -79,6 +82,36 @@ namespace MascotaFeliz.App.Consola
             _repoDueno.UpdateDueno(dueno);
         }
 
+/*
+        private static void AsignarVisitaPyP(int idHistoria)
+        {
+            var historia = _repoHistoria.GetHistoria(idHistoria);
+            if (historia != null)
+            {
+                if (historia.VisitasPyP != null)
+                {
+                    historia.VisitasPyP.Add(new VisitaPyP { FechaVisita = new DateTime(1000, 09, 21), Temperatura = 38.0F, Peso = 30.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy cansón", CedulaVeterinario = "123", Recomendaciones = "Dieta extrema"});
+                }
+                else
+                {
+                    historia.VisitasPyP = new List<VisitaPyP>{
+                        new VisitaPyP{FechaVisita = new DateTime(2000, 01, 01), Temperatura = 38.0F, Peso = 30.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy cansón", CedulaVeterinario = "123", Recomendaciones = "Dieta extrema" }
+                    };
+                }
+                _repoHistoria.UpdateHistoria(historia);
+            }
+        }
+*/
+
+        private static void AddHistoria()
+        {
+            var historia = new Historia
+            {
+                FechaInicial = new DateTime(2020, 01, 01)
+
+            };
+            _repoHistoria.AddHistoria(historia);
+        }
         
     }
 }
