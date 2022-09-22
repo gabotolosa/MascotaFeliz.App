@@ -7,7 +7,7 @@ namespace MascotaFeliz.App.Persistencia
 {
     public class RepositorioHistoria
     {
-          /// <summary>
+        /// <summary>
         /// Referencia al contexto de Historia
         /// </summary>
         private readonly AppContext _appContext;
