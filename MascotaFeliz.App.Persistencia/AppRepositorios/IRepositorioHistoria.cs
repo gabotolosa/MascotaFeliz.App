@@ -10,7 +10,7 @@ namespace MascotaFeliz.App.Persistencia
     {
         IEnumerable<Historia> GetAllHistorias();//listar todos los historias
         Historia AddHistoria(Historia historia); //agregar historia
-        //Historia UpdateHistoria(Historia historia); //actualizar historia
+        Historia UpdateHistoria(Historia historia); //actualizar historia
         void DeleteHistoria(int idHistoria);//borrar historia
         Historia GetHistoria(int idHistoria); //buscar por id
         //IEnumerable<Historia> GetHistoriaPorFiltro(string filtro); //buscar por filtro          
