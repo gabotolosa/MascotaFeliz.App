@@ -5,7 +5,7 @@ using MascotaFeliz.App.Dominio;
 using Microsoft.EntityFrameworkCore;
 namespace MascotaFeliz.App.Persistencia
 {
-    public class RepositorioVisitaPyP
+    public class RepositorioVisitaPyP:IRepositorioVisitaPyP
     {
         /// <summary>
         /// Referencia al contexto de Historia

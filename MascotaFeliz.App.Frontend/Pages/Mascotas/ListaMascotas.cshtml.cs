@@ -24,5 +24,6 @@ namespace MascotaFeliz.App.Frontend.Pages
         {
             listaMascotas = _repoMascota.GetAllMascotas();
         }
+        
     }
 }

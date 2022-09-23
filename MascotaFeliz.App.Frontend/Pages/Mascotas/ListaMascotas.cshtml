@@ -1,4 +1,4 @@
-﻿@page
+﻿@page 
 @model MascotaFeliz.App.Frontend.Pages.ListaMascotasModel
 @{
 }
@@ -12,6 +12,8 @@
         <th>Id</th>
         <th>Nombre</th>
         <th>Color</th>
+        <th>Raza</th>
+        <th>Nombre Dueño</th>
     </tr>
     @foreach (var mascota in Model.listaMascotas)
     {
@@ -19,7 +21,10 @@
             <td>@mascota.Id</td>
             <td>@mascota.Nombre</td>
             <td>@mascota.Color</td>
-        
+            <td>@mascota.Raza</td>
+            <td>@mascota.Dueno.Nombres @mascota.Dueno.Apellidos</td>
+            
+
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./DetallesMascotas" asp-route-mascotaId="@mascota.Id">
                     Detalle Mascota
@@ -30,12 +35,7 @@
                     Editar Mascota
                 </a>
             </td>
-            <td>
-                <a class="btn btn-primary table-btn" asp-page="./BorrarMascotas" asp-route-mascotaId="@mascota.Id">
-                    Borrar Mascota
-                </a>
-            </td>
-
+            
 
         </tr>
     }

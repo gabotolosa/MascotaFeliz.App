@@ -15,7 +15,8 @@ namespace MascotaFeliz.App.Persistencia
         }
 
         public IEnumerable<Mascota> GetAllMascotas(){
-            return GetAllMascotas_();
+            //return GetAllMascotas_();
+            return _appContext.Mascotas.Include("Dueno").Include("Veterinario").Include("Historia");
         }
 
         public IEnumerable<Mascota> GetAllMascotas_(){
