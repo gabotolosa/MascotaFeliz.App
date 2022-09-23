@@ -14,6 +14,7 @@
         <th>Color</th>
         <th>Raza</th>
         <th>Nombre Dueño</th>
+        <th>Veterinario Asignado</th>
     </tr>
     @foreach (var mascota in Model.listaMascotas)
     {
@@ -23,7 +24,7 @@
             <td>@mascota.Color</td>
             <td>@mascota.Raza</td>
             <td>@mascota.Dueno.Nombres @mascota.Dueno.Apellidos</td>
-            
+            <td>Id:@mascota.Veterinario.Id @mascota.Veterinario.Nombres @mascota.Veterinario.Apellidos</td>
 
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./DetallesMascotas" asp-route-mascotaId="@mascota.Id">
@@ -35,7 +36,11 @@
                     Editar Mascota
                 </a>
             </td>
-            
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./AsignarDueno" asp-route-mascotaId="@mascota.Id">
+                    Asignar Dueño
+                </a>
+            </td>
 
         </tr>
     }
