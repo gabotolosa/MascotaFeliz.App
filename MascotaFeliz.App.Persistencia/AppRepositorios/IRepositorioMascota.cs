@@ -13,6 +13,8 @@ namespace MascotaFeliz.App.Persistencia
         void DeleteMascota(int idMascota);
         Mascota GetMascota(int idMascota);
         IEnumerable<Mascota> GetMascotasPorFiltro(string filtro); //buscar por filtro  
+        //IEnumerable<Mascota> GetMascotasPorDueno(int idDueno); //buscar por iddueño
+        
 
         Veterinario AsignarVeterinario(int idMascota, int idVeterinario);//asinar veterinario a mascota
         Dueno AsignarDueno(int idMascota, int idDueno);// asignar dueño a mascota
