@@ -55,7 +55,8 @@ namespace MascotaFeliz.App.Consola
 
         private static void DeleteMascota()
         {
-            _repoMascota.DeleteMascota(6);
+            _repoMascota.DeleteMascota(8);
+            Console.WriteLine("mascota Borrada");
         }
 
         
@@ -128,7 +129,7 @@ namespace MascotaFeliz.App.Consola
 
         private static void AsignarDueno()
         {
-            var dueno = _repoMascota.AsignarDueno(6, 1);
+            var dueno = _repoMascota.AsignarDueno(8, 2);
             Console.WriteLine(dueno.Nombres + " " + dueno.Apellidos);
         }
 
