@@ -78,7 +78,6 @@ namespace MascotaFeliz.App.Persistencia
 
             }
             return duenos;
-
         }
 
     }
