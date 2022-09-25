@@ -11,7 +11,7 @@ namespace MascotaFeliz.App.Frontend.Pages
 {
     public class AsignarDuenoModel : PageModel
     {
-        /*
+      /*  
         private readonly IRepositorioMascota _repoMascota;
         private readonly IRepositorioDueno _repoDueno;
 
@@ -33,7 +33,7 @@ namespace MascotaFeliz.App.Frontend.Pages
                 return Page();
             }
         }
-        */
-        public void OnGet(){}
+    */    
+
     }
 }

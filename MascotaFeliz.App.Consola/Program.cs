@@ -30,7 +30,7 @@ namespace MascotaFeliz.App.Consola
             //ListarMascotasNombreRazaColor();
 
             //AsignarHistoria();
-            AsignarVisitaPyP(2);
+            //AsignarVisitaPyP(1);
 
         }
         
@@ -55,7 +55,7 @@ namespace MascotaFeliz.App.Consola
 
         private static void DeleteMascota()
         {
-            _repoMascota.DeleteMascota(2);
+            _repoMascota.DeleteMascota(6);
         }
 
         
@@ -128,7 +128,7 @@ namespace MascotaFeliz.App.Consola
 
         private static void AsignarDueno()
         {
-            var dueno = _repoMascota.AsignarDueno(4, 6);
+            var dueno = _repoMascota.AsignarDueno(6, 1);
             Console.WriteLine(dueno.Nombres + " " + dueno.Apellidos);
         }
 
@@ -137,15 +137,16 @@ namespace MascotaFeliz.App.Consola
         {
             var historia = new Historia
             {
-                FechaInicial = new DateTime(2020, 01, 01)
-
+                FechaInicial = new DateTime(2020, 02, 02)
+                
             };
             _repoHistoria.AddHistoria(historia);
+            Console.WriteLine("historia creada");
         }
 
         private static void AsignarVeterinario()
         {
-            var veterinario = _repoMascota.AsignarVeterinario(4, 7);
+            var veterinario = _repoMascota.AsignarVeterinario(6, 5);
             Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
         }
 
@@ -171,7 +172,8 @@ namespace MascotaFeliz.App.Consola
 
         private static void AsignarHistoria()
         {
-            var historia = _repoMascota.AsignarHistoria(1,1);
+            var historia = _repoMascota.AsignarHistoria(6,2);
+            Console.WriteLine("historia asignada");
         }
 
         
