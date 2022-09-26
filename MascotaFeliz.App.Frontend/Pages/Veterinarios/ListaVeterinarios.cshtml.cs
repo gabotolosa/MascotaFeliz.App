@@ -20,9 +20,13 @@ namespace MascotaFeliz.App.Frontend.Pages
             this._repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
         }
 
-        public void OnGet()
+        public IActionResult OnGet(int? veterinarioId)
         {
+            if(veterinarioId.HasValue){
+                _repoVeterinario.DeleteVeterinario(veterinarioId.Value);
+            }
             listaVeterinarios=_repoVeterinario.GetAllVeterinarios();
+            return Page();
         }
     }
 }

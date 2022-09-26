@@ -12,46 +12,71 @@ namespace MascotaFeliz.App.Frontend.Pages
     public class EditarMascotasModel : PageModel
     {
         private readonly IRepositorioMascota _repoMascota;
+        private readonly IRepositorioDueno _repoDueno;
+        private readonly IRepositorioVeterinario _repoVeterinario;
         [BindProperty]
-        public Mascota mascota{get; set;}
+        public Mascota mascota { get; set; }
+        public Veterinario veterinario { get; set; }
+        public Dueno dueno { get; set; }
+        public IEnumerable<Dueno> listaDuenos { get; set; }
+        public IEnumerable<Veterinario> listaVeterinarios { get; set; }
+
         public EditarMascotasModel()
         {
             this._repoMascota = new RepositorioMascota(new Persistencia.AppContext());
+            this._repoDueno = new RepositorioDueno(new Persistencia.AppContext());
+            this._repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
+
         }
-        
-        public IActionResult OnGet(int? mascotaId)
+
+        public void OnGet(int? mascotaId)
         {
-            if(mascotaId.HasValue)
+            listaDuenos = _repoDueno.GetAllDuenos();
+            listaVeterinarios = _repoVeterinario.GetAllVeterinarios();
+
+            if (mascotaId.HasValue)
             {
                 mascota = _repoMascota.GetMascota(mascotaId.Value);
             }
-            else
+            else 
             {
-                mascota= new Mascota();
+                mascota = new Mascota();
             }
-            if(mascota==null)
+            if (mascota == null)
             {
-                return RedirectToPage("./NotFound.html");
+                RedirectToPage("./NotFound");
             }
-            else
-                return Page();
+                Page();
+            
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(Mascota mascota, int duenoId, int veterinarioId)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return Page();
-            }
-            if (mascota.Id > 0)
-            {
-                mascota = _repoMascota.UpdateMascota(mascota);
+                dueno = _repoDueno.GetDueno(duenoId);
+                veterinario = _repoVeterinario.GetVeterinario(veterinarioId);
+                if (mascota.Id > 0)
+                {
+                    mascota.Veterinario = veterinario;
+                    mascota.Dueno = dueno;
+                    mascota = _repoMascota.UpdateMascota(mascota);
+                }
+                else
+                {
+                    
+                    mascota = _repoMascota.AddMascota(mascota);
+                    _repoMascota.AsignarDueno(mascota.Id,dueno.Id);
+                    _repoMascota.AsignarVeterinario(mascota.Id,veterinario.Id);
+
+                }
+                return RedirectToPage("/Mascotas/ListaMascotas");
+
             }
             else
             {
-                _repoMascota.AddMascota(mascota);
+                return Page();
             }
-            return Page();
         }
     }
 }
