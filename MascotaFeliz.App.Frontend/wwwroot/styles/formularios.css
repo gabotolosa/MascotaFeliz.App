@@ -7,7 +7,7 @@
 .formulario input, .formulario select {
     padding: 5px;
     outline: none;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(208, 219, 230);
     margin: 5px 0px 10px 0px;
 }
 

@@ -16,12 +16,14 @@ a {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+  border-radius: 3px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #d4a011;
   border-color: #1861ac;
+  border-radius: 3px;
 }
 
 /* Sticky footer styles
@@ -69,7 +71,7 @@ body {
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 40px; /* Vertically center the text there */
   
 }
 
@@ -80,3 +82,6 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.h2{
+  color:#d4a011;
+}

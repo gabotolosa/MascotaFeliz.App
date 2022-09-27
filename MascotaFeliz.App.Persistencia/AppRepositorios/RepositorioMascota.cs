@@ -44,6 +44,8 @@ namespace MascotaFeliz.App.Persistencia
                 mascotaEncontrado.Color=mascota.Color;
                 mascotaEncontrado.Especie=mascota.Especie;
                 mascotaEncontrado.Raza=mascota.Raza;
+                mascotaEncontrado.Dueno=mascota.Dueno;
+                mascotaEncontrado.Veterinario=mascota.Veterinario;
 
                 _appContext.SaveChanges();
             }
