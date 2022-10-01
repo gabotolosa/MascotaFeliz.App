@@ -6,22 +6,24 @@
     <h2>Agregar o editar Veterinarios</h2>
 </div>
 
-<form method="post" >
-    <div class="form-group">
-        <input type="hidden" asp-for = "veterinario.Id" />
-        <label asp-for="veterinario.Nombres"></label>
-        <input asp-for="veterinario.Nombres" class="form-control">
-        <label asp-for="veterinario.Apellidos"></label>
-        <input asp-for="veterinario.Apellidos" class="form-control">
-        <label asp-for="veterinario.Direccion"></label>
-        <input asp-for="veterinario.Direccion" class="form-control">
-        <label asp-for="veterinario.Telefono"></label>
-        <input asp-for="veterinario.Telefono" class="form-control">
-        <label asp-for="veterinario.TarjetaProfesional"></label>
-        <input asp-for="veterinario.TarjetaProfesional" class="form-control">
-
-        <button type="submit" class="btn btn-primary">Guardar</button>
-    </div>
-</form>
+<div class="principalForm">
+    <form method="post">
+        <div class="form-group">
+            <input type="hidden" asp-for="veterinario.Id" />
+            <label asp-for="veterinario.Nombres"></label>
+            <input asp-for="veterinario.Nombres" class="form-control">
+            <label asp-for="veterinario.Apellidos"></label>
+            <input asp-for="veterinario.Apellidos" class="form-control">
+            <label asp-for="veterinario.Direccion"></label>
+            <input asp-for="veterinario.Direccion" class="form-control">
+            <label asp-for="veterinario.Telefono"></label>
+            <input asp-for="veterinario.Telefono" class="form-control">
+            <label asp-for="veterinario.TarjetaProfesional"></label>
+            <input asp-for="veterinario.TarjetaProfesional" class="form-control">
+            <br>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+</div>
 
 <a asp-page="./ListaVeterinarios" class="btn-default">Lista de Veterinarios </a>
