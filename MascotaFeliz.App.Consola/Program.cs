@@ -21,7 +21,7 @@ namespace MascotaFeliz.App.Consola
             //AddVeterinario();
             //AddMascota();
             //DeleteDueno();
-            //DeleteMascota();
+            DeleteMascota();
             //ActualizarDueno(4);
             //AddHistoria();
             //AsignarDueno();
@@ -55,7 +55,7 @@ namespace MascotaFeliz.App.Consola
 
         private static void DeleteMascota()
         {
-            _repoMascota.DeleteMascota(8);
+            _repoMascota.DeleteMascota(4);
             Console.WriteLine("mascota Borrada");
         }
 
@@ -138,7 +138,7 @@ namespace MascotaFeliz.App.Consola
         {
             var historia = new Historia
             {
-                FechaInicial = new DateTime(2020, 02, 02)
+                FechaInicial = new DateTime(2020, 02, 04)
                 
             };
             _repoHistoria.AddHistoria(historia);

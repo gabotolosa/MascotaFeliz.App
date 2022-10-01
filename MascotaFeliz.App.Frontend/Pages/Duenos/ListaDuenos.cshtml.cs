@@ -21,8 +21,6 @@ namespace MascotaFeliz.App.Frontend.Pages
             this._repoDueno = new RepositorioDueno(new Persistencia.AppContext());
         }
         
-        
-
         public IActionResult OnGet(int? duenoId)
         {
             if (duenoId.HasValue)

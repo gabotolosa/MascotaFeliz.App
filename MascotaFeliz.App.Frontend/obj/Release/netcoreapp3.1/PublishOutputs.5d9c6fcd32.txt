@@ -53,6 +53,7 @@ C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Release\netcoreapp3.1
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\styles\NavBar.css
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\styles\normalize.css
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\styles\Tablas.css
+C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\video\video1.mp4
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Release\netcoreapp3.1\PubTmp\Out\MascotaFeliz.App.Frontend.dll

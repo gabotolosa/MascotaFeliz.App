@@ -20,9 +20,14 @@ namespace MascotaFeliz.App.Frontend.Pages
             this._repoMascota = new RepositorioMascota(new Persistencia.AppContext());
         }
         
-        public void OnGet()
+        public IActionResult OnGet(int? mascotaId)
         {
+            if (mascotaId.HasValue)
+            {
+                _repoMascota.DeleteMascota(mascotaId.Value);
+            }
             listaMascotas = _repoMascota.GetAllMascotas();
+            return Page();
         }
         
     }
