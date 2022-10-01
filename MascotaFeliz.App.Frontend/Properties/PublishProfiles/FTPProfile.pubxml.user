@@ -7,7 +7,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAARS0GE8gNEaF0rt9FSzI+wAAAAACAAAAAAAQZgAAAAEAACAAAAC/N5QVeOdu/wW1ouCJh6Z3q4plcpHeoNfdId1XTCWDCQAAAAAOgAAAAAIAACAAAAAKh+/bbM/GllagRtdcZoIR+7IJrlYTCTNsmiAaF9Ht9iAAAAAZ4OYgRj5f4ls/CLMrPOwVXGGWsm01kaepZaJWUxdHLkAAAADu5pUn+5B+gCS/9dSpFF4lkW11uZTevgMgl/f28JAixTgnYo5deClIkNlsGVS5sB1Pvbn1LJNMXezeKr3iK7RC</EncryptedPassword>
     <_PublishTargetUrl>ftp://198.37.116.25/www.mimascotafeliz.somee.com</_PublishTargetUrl>
-    <History>True|2022-10-01T17:10:49.8496636Z;True|2022-09-28T14:04:38.7252479-05:00;</History>
+    <History>True|2022-10-01T22:13:37.5185111Z;True|2022-10-01T15:09:10.9402719-05:00;True|2022-10-01T12:10:49.8496636-05:00;True|2022-09-28T14:04:38.7252479-05:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -18,13 +18,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/14/2022 12:44:23</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Consola.dll">
-      <publishTime>09/28/2022 13:59:43</publishTime>
+      <publishTime>10/01/2022 12:45:54</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Consola.exe">
-      <publishTime>09/28/2022 13:59:44</publishTime>
+      <publishTime>10/01/2022 12:45:54</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Consola.pdb">
-      <publishTime>09/28/2022 13:59:43</publishTime>
+      <publishTime>10/01/2022 12:45:54</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Consola.runtimeconfig.json">
       <publishTime>09/28/2022 13:59:44</publishTime>
@@ -36,25 +36,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/28/2022 13:59:38</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Frontend.deps.json">
-      <publishTime>10/01/2022 12:06:40</publishTime>
+      <publishTime>10/01/2022 17:08:44</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Frontend.dll">
-      <publishTime>10/01/2022 12:06:33</publishTime>
+      <publishTime>10/01/2022 17:08:25</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Frontend.exe">
-      <publishTime>10/01/2022 12:06:33</publishTime>
+      <publishTime>10/01/2022 17:08:25</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Frontend.pdb">
-      <publishTime>10/01/2022 12:06:33</publishTime>
+      <publishTime>10/01/2022 17:08:25</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Frontend.runtimeconfig.json">
       <publishTime>09/28/2022 14:01:08</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Frontend.Views.dll">
-      <publishTime>10/01/2022 12:06:39</publishTime>
+      <publishTime>10/01/2022 17:08:33</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Frontend.Views.pdb">
-      <publishTime>10/01/2022 12:06:39</publishTime>
+      <publishTime>10/01/2022 17:08:33</publishTime>
     </File>
     <File Include="MascotaFeliz.App.Persistencia.dll">
       <publishTime>09/28/2022 13:59:40</publishTime>
@@ -183,10 +183,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/15/2019 08:37:42</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>10/01/2022 12:06:47</publishTime>
+      <publishTime>10/01/2022 17:08:46</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
-      <publishTime>10/01/2022 11:52:57</publishTime>
+      <publishTime>10/01/2022 14:55:49</publishTime>
     </File>
     <File Include="wwwroot/favicon.ico">
       <publishTime>09/24/2022 10:17:15</publishTime>
