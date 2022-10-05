@@ -12,17 +12,17 @@
             <input type="hidden" asp-for="mascota.Id" />
 
             <label asp-for="mascota.Nombre"></label>
-            <input asp-for="mascota.Nombre" class="form-control" placeholder="Nombre mascota">
+            <input asp-for="mascota.Nombre" class="form-control" placeholder="Nombre mascota" required>
             <label asp-for="mascota.Color"></label>
-            <input asp-for="mascota.Color" class="form-control" placeholder="Color">
+            <input asp-for="mascota.Color" class="form-control" placeholder="Color" required>
             <label asp-for="mascota.Especie"></label>
-            <input asp-for="mascota.Especie" class="form-control" placeholder="Especie">
+            <input asp-for="mascota.Especie" class="form-control" placeholder="Especie" required>
             <label asp-for="mascota.Raza"></label>
-            <input asp-for="mascota.Raza" class="form-control" placeholder="Raza">
+            <input asp-for="mascota.Raza" class="form-control" placeholder="Raza" required>
             <br>
             <label for="dueno">Dueño</label>
             <br>
-            <select id="dueno" asp-for="mascota.Dueno.Id" name="duenoId">
+            <select id="dueno" asp-for="mascota.Dueno.Id" name="duenoId" required>
                 <option value="0">Seleccione un Dueño</option>
                 @foreach (var dueno in Model.listaDuenos)
                 {
@@ -32,7 +32,7 @@
             <br>
             <label for="veterinario">Veterinario</label>
             
-            <select id="veterinario" asp-for="mascota.Veterinario.Id" name="veterinarioId">
+            <select id="veterinario" asp-for="mascota.Veterinario.Id" name="veterinarioId" required>
                 <option value="0">Seleccione un Veterinario</option>
                 @foreach (var veterinario in Model.listaVeterinarios)
                 {

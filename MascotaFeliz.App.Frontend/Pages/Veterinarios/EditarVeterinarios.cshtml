@@ -11,15 +11,15 @@
         <div class="form-group">
             <input type="hidden" asp-for="veterinario.Id" />
             <label asp-for="veterinario.Nombres"></label>
-            <input asp-for="veterinario.Nombres" class="form-control" placeholder="Nombres">
+            <input asp-for="veterinario.Nombres" class="form-control" placeholder="Nombres" required>
             <label asp-for="veterinario.Apellidos"></label>
-            <input asp-for="veterinario.Apellidos" class="form-control" placeholder="Apellidos">
+            <input asp-for="veterinario.Apellidos" class="form-control" placeholder="Apellidos" required>
             <label asp-for="veterinario.Direccion"></label>
-            <input asp-for="veterinario.Direccion" class="form-control" placeholder="Direccion">
+            <input asp-for="veterinario.Direccion" class="form-control" placeholder="Direccion" required>
             <label asp-for="veterinario.Telefono"></label>
-            <input asp-for="veterinario.Telefono" class="form-control" placeholder="Telefono">
+            <input asp-for="veterinario.Telefono" class="form-control" placeholder="Telefono" required>
             <label asp-for="veterinario.TarjetaProfesional"></label>
-            <input asp-for="veterinario.TarjetaProfesional" class="form-control" placeholder="Tarjeta Profesional">
+            <input asp-for="veterinario.TarjetaProfesional" class="form-control" placeholder="Tarjeta Profesional" required>
             <br>
             <button type="submit" class="btn btn-primary">Guardar</button>
         </div>
