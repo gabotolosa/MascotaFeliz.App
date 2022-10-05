@@ -21,7 +21,7 @@ namespace MascotaFeliz.App.Consola
             //AddVeterinario();
             //AddMascota();
             //DeleteDueno();
-            DeleteMascota();
+            //DeleteMascota();
             //ActualizarDueno(4);
             //AddHistoria();
             //AsignarDueno();
@@ -30,7 +30,7 @@ namespace MascotaFeliz.App.Consola
             //ListarMascotasNombreRazaColor();
 
             //AsignarHistoria();
-            //AsignarVisitaPyP(1);
+            AsignarVisitaPyP(4);
 
         }
         
@@ -50,7 +50,7 @@ namespace MascotaFeliz.App.Consola
         
         private static void DeleteDueno()//borra dueño con el id
         {
-            _repoDueno.DeleteDueno(3);
+            _repoDueno.DeleteDueno(1);
         }
 
         private static void DeleteMascota()
@@ -115,15 +115,16 @@ namespace MascotaFeliz.App.Consola
             {
                 if (historia.VisitasPyP != null)
                 {
-                    historia.VisitasPyP.Add(new VisitaPyP { FechaVisita = new DateTime(1000, 09, 21), Temperatura = 38.0F, Peso = 30.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy cansón", IdVeterinario = 2, Recomendaciones = "Dieta extrema"});
+                    historia.VisitasPyP.Add(new VisitaPyP { FechaVisita = new DateTime(1900, 09, 21), Temperatura = 36.0F, Peso = 25.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy canson", IdVeterinario = 5, Recomendaciones = "Dieta extrema"});
                 }
                 else
                 {
                     historia.VisitasPyP = new List<VisitaPyP>{
-                        new VisitaPyP{FechaVisita = new DateTime(2000, 01, 01), Temperatura = 38.0F, Peso = 30.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy cansón", IdVeterinario = 2, Recomendaciones = "Dieta extrema" }
+                        new VisitaPyP{FechaVisita = new DateTime(2000, 09, 01), Temperatura = 38.0F, Peso = 25.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "muy canson", IdVeterinario = 5, Recomendaciones = "Dieta extrema" }
                     };
                 }
                 _repoHistoria.UpdateHistoria(historia);
+                Console.WriteLine("Visita agregada");
             }
         }
 
@@ -138,7 +139,7 @@ namespace MascotaFeliz.App.Consola
         {
             var historia = new Historia
             {
-                FechaInicial = new DateTime(2020, 02, 04)
+                FechaInicial = new DateTime(2020, 02, 06)
                 
             };
             _repoHistoria.AddHistoria(historia);
@@ -173,7 +174,7 @@ namespace MascotaFeliz.App.Consola
 
         private static void AsignarHistoria()
         {
-            var historia = _repoMascota.AsignarHistoria(6,2);
+            var historia = _repoMascota.AsignarHistoria(10,4);
             Console.WriteLine("historia asignada");
         }
 

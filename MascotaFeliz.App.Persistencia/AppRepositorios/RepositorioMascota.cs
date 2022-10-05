@@ -46,7 +46,7 @@ namespace MascotaFeliz.App.Persistencia
                 mascotaEncontrado.Raza=mascota.Raza;
                 mascotaEncontrado.Dueno=mascota.Dueno;
                 mascotaEncontrado.Veterinario=mascota.Veterinario;
-
+                //mascotaEncontrado.Historia=mascota.Historia;
                 _appContext.SaveChanges();
             }
             return mascotaEncontrado;
